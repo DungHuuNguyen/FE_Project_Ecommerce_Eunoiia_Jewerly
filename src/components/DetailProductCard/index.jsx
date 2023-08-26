@@ -190,6 +190,7 @@ const DetailProductCard = () => {
       })
     );
     // eslint-disable-next-line
+    /* Add comment */
   }, [params.productId]);
 
   let sumStar = 0;
