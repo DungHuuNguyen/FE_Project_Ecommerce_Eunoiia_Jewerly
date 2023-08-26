@@ -1,0 +1,58 @@
+.check-out-container {
+  width: 1360px;
+  max-width: 80vw;
+  padding-top: 10px;
+}
+.check-out {
+  &__noti,
+  &__payment-link-noti {
+    display: flex;
+    justify-content: left;
+    padding: 10px 0;
+  }
+
+  &__infor-bill {
+    table {
+      border-collapse: collapse;
+      tr {
+        th,
+        td {
+          border: 1px solid #cdcdcd;
+          border-top: none;
+          border-bottom: none;
+        }
+        th:first-child,
+        td:first-child {
+          border-left: none;
+        }
+        th:last-child,
+        td:last-child {
+          border-right: none;
+        }
+        th {
+          padding: 0 10px;
+          font-size: 12px;
+          font-weight: 400;
+          text-align: left;
+        }
+        td {
+          padding: 5px 10px;
+          font-size: 16px;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1221px) {
+  .check-out-container {
+    padding-top: 90px;
+  }
+}
+@media screen and (max-width: 900px) {
+  .check-out-container {
+    padding-top: 5px;
+    max-width: 95vw;
+  }
+}

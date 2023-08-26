@@ -1,0 +1,51 @@
+.user-purchase-history-wrapper {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  padding-top: 100px;
+}
+
+.user-purchase-history-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100vw;
+  max-width: 1200px;
+}
+
+.user-purchase-history-profile-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 1132px) {
+  .user-purchase-history-wrapper {
+    padding-top: 180px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .user-purchase-history-wrapper {
+    padding-top: 100px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .user-purchase-history-wrapper {
+    padding-top: 90px;
+  }
+  .user-purchase-history-container {
+    flex-direction: column;
+  }
+  .user-purchase-history-profile-nav {
+    padding-bottom: 30px;
+  }
+  .user-purchase-history-change-profile {
+    padding-bottom: 50px;
+    display: flex;
+    justify-content: center;
+  }
+}

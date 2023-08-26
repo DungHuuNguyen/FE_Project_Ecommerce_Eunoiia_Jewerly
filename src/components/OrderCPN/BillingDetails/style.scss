@@ -1,0 +1,86 @@
+.billing-detail-container {
+  input {
+    border-radius: 0 !important;
+  }
+}
+
+.billing-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  &__title {
+    padding: 50px 0 10px 0;
+    border-bottom: 1px solid rgb(210, 210, 210);
+    h3 {
+      font-weight: 400;
+      font-size: 24px;
+    }
+  }
+
+  &__form-grp {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    &--full-name {
+      padding-top: 30px;
+    }
+
+    &--ward-district-grp {
+      display: flex;
+      gap: 20px;
+    }
+
+    &--ward,
+    &--district {
+      width: 100%;
+    }
+
+    &--ship-to-different-address {
+      padding: 10px 0;
+    }
+  }
+
+  &__form-different-address {
+    display: none;
+
+    &--ward-district-grp {
+      gap: 20px;
+      display: flex;
+    }
+  }
+
+  &__order-notes {
+    padding: 10px 0;
+  }
+
+  &__submit-btn {
+    display: flex;
+    justify-content: center;
+    padding: 30px 0 60px 0;
+    button {
+      width: 200px;
+      font-size: 20px;
+      height: 40px;
+      color: black;
+      border: 1px solid #b37e6b;
+    }
+
+    button:hover {
+      background-color: #b37e6b;
+      color: white !important;
+    }
+  }
+
+  label {
+    font-weight: 500;
+    padding: 10px 0;
+  }
+}
+
+.show-form-different-address {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}

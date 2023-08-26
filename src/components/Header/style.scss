@@ -1,0 +1,472 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header-wrapper {
+  display: flex;
+  justify-content: center;
+  background-color: #f8f6f4;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 40px;
+  max-width: 1440px;
+  width: 100%;
+}
+
+.header-navBar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__logo {
+    img {
+      width: 150px;
+      height: 28px;
+      cursor: pointer;
+      margin-right: 50px;
+    }
+  }
+
+  &__list {
+    list-style-type: none;
+    text-transform: uppercase;
+  }
+
+  &__listItem {
+    display: inline-block;
+    padding: 30px 40px;
+    text-align: center;
+    cursor: pointer;
+
+    a {
+      position: relative;
+      text-decoration: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    span {
+      color: rgb(32, 32, 32);
+    }
+
+    a:hover {
+      transition: all 0.3s ease;
+      transform: scale(1.3);
+      span {
+        color: #b37e6b;
+      }
+    }
+
+    span.anticon {
+      position: absolute;
+      right: -20px;
+      bottom: 3px;
+      cursor: pointer;
+      font-size: 10px;
+    }
+  }
+
+  &__shopItem {
+    position: relative;
+  }
+
+  &__subNavProduct {
+    position: absolute;
+    bottom: -172px;
+    left: 30px;
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: 0.1px 0.1px 4px #888888;
+    // loại bỏ thuộc tính hiển thị => mới dùng đc transition
+    // vì display none => block ko phải là animation => k dùng đc
+    visibility: hidden;
+    opacity: 0;
+    // display: none;
+    li {
+      list-style: none;
+      display: flex;
+      justify-content: left;
+      padding: 10px;
+      width: 220px;
+      cursor: pointer;
+    }
+
+    &--rings {
+      border: 1px solid rgb(208, 208, 208);
+      border-top: 2px solid black;
+    }
+    &--earrings,
+    &--necklaces,
+    &--bracelets {
+      border: 1px solid rgb(249, 249, 249);
+    }
+  }
+  &__shopItem:hover &__subNavProduct {
+    // display: block;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 1s, visibility 1s;
+    -webkit-transition: opacity 600ms, visibility 600ms;
+  }
+
+  &__giftItem {
+    position: relative;
+  }
+
+  &__subNavGift {
+    position: absolute;
+    bottom: -85.5px;
+    left: 30px;
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: 0.1px 0.1px 4px #888888;
+    // loại bỏ thuộc tính hiển thị => mới dùng đc transition
+    // vì display none => block ko phải là animation => k dùng đc
+    visibility: hidden;
+    opacity: 0;
+    // display: none;
+    li {
+      list-style: none;
+      display: flex;
+      justify-content: left;
+      padding: 10px;
+      width: 220px;
+      cursor: pointer;
+    }
+    &--her {
+      border: 1px solid rgb(208, 208, 208);
+      border-top: 2px solid black;
+    }
+    &--him {
+      border: 1px solid rgb(249, 249, 249);
+    }
+  }
+
+  &__giftItem:hover &__subNavGift {
+    // display: block;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 1s, visibility 1s;
+    -webkit-transition: opacity 600ms, visibility 600ms;
+  }
+
+  &__blogItem {
+    position: relative;
+  }
+
+  &__subNavBlog {
+    position: absolute;
+    bottom: -129px;
+    left: 30px;
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: 0.1px 0.1px 4px #888888;
+    // loại bỏ thuộc tính hiển thị => mới dùng đc transition
+    // vì display none => block ko phải là animation => k dùng đc
+    visibility: hidden;
+    opacity: 0;
+    // display: none;
+    li {
+      list-style: none;
+      display: flex;
+      justify-content: left;
+      padding: 10px;
+      width: 220px;
+      cursor: pointer;
+    }
+    &--basicInformation {
+      border: 1px solid rgb(208, 208, 208);
+      border-top: 2px solid black;
+    }
+    &--tips,
+    &--diamondJewelry {
+      border: 1px solid rgb(249, 249, 249);
+    }
+  }
+
+  &__blogItem:hover &__subNavBlog {
+    // display: block;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 1s, visibility 1s;
+    -webkit-transition: opacity 600ms, visibility 600ms;
+  }
+
+  &__btnClosed-navBar {
+    display: none;
+  }
+}
+
+.header-left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  position: relative;
+
+  &__searchBox {
+    display: flex;
+    gap: 16px;
+    background-color: white;
+    padding: 4px;
+    border-radius: 25px;
+
+    input {
+      border-radius: 25px;
+      border: none;
+    }
+
+    span {
+      display: flex;
+      align-items: center;
+
+      svg {
+        font-size: 20px;
+        color: #b37e6b;
+        cursor: pointer;
+      }
+    }
+  }
+
+  &__shoppingCart,
+  &__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    color: #b37e6b;
+    // border: 1px solid #b37e6b;
+    border-radius: 25px;
+    width: 70px;
+    height: 40px;
+    cursor: pointer;
+  }
+
+  &__shoppingCart {
+    position: relative;
+  }
+
+  &__shoppingCartCount {
+    border: 1px solid #b27d6d;
+    border-radius: 100%;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #b27d6d;
+    position: absolute;
+    right: 5px;
+    top: 0;
+    p {
+      font-size: 14px;
+      color: white;
+    }
+  }
+
+  &__loginRegisterGrp {
+  }
+
+  &__user-grp {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+  }
+
+  &__user-avatar {
+    img {
+      width: 30px;
+      display: flex;
+      cursor: pointer;
+    }
+  }
+}
+
+.header-btn-show-navBar {
+  display: none;
+}
+
+@media screen and (max-width: 900px) {
+  .header-container {
+    height: 70px;
+  }
+
+  .header-btn-show-navBar {
+    font-size: 35px;
+    display: flex;
+    align-self: center;
+    justify-self: center;
+    color: #b37e6b;
+    cursor: pointer;
+  }
+
+  .header-navBar {
+    position: relative;
+
+    &__logo {
+      img {
+        margin: 0;
+      }
+    }
+    &__list-grp {
+      display: none;
+    }
+    &__list-grp-show {
+      display: block !important;
+    }
+    &__list {
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgb(255, 255, 255);
+    }
+    &__listItem {
+      display: flex;
+      justify-content: center;
+
+      a {
+        font-size: 30px;
+        display: block;
+        width: 200px;
+      }
+      a:hover {
+        transition: none;
+        transform: none;
+      }
+      span {
+        margin: 0 20px;
+      }
+      svg {
+        font-size: 25px;
+        cursor: pointer;
+      }
+    }
+    &__btnShow {
+      width: 100%;
+      display: flex;
+      justify-content: right;
+    }
+    &__btnClosed-navBar {
+      display: flex;
+      justify-content: right;
+      width: 100%;
+      font-size: 16px;
+      padding: 10px;
+      cursor: pointer;
+    }
+
+    &__shopItem {
+      position: static; //set để bỏ cái position bên trên
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-bottom: 0;
+      &--title {
+        padding-bottom: 30px;
+      }
+    }
+
+    &__subNavProduct {
+      display: none;
+      position: static;
+      visibility: visible;
+      opacity: 1;
+      li {
+        display: flex;
+        justify-content: center;
+        padding: 20px;
+        width: 100vw;
+      }
+    }
+
+    &__subNavProductMobile {
+      display: block;
+    }
+
+    &__giftItem {
+      position: static; //set để bỏ cái position bên trên
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-bottom: 0;
+      &--title {
+        padding-bottom: 30px;
+      }
+    }
+
+    &__subNavGift {
+      display: none;
+      position: static;
+      visibility: visible;
+      opacity: 1;
+      li {
+        display: flex;
+        justify-content: center;
+        padding: 20px;
+        width: 100vw;
+      }
+    }
+
+    &__subNavGiftMobile {
+      display: block;
+    }
+
+    &__blogItem {
+      position: static; //set để bỏ cái position bên trên
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-bottom: 0;
+      &--title {
+        padding-bottom: 30px;
+      }
+    }
+
+    &__subNavBlog {
+      display: none;
+      position: static;
+      visibility: visible;
+      opacity: 1;
+      li {
+        display: flex;
+        justify-content: center;
+        padding: 20px;
+        width: 100vw;
+      }
+    }
+
+    &__subNavBlogMobile {
+      display: block;
+    }
+  }
+
+  .header-left {
+    &__searchBox {
+      input {
+        display: none;
+      }
+    }
+    &__searchBox:hover input {
+      display: block;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+}
+
+@media screen and (max-width: 600px) {
+}

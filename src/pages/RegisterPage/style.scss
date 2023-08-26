@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.register-page-wrapper {
+  display: flex;
+  justify-content: center;
+  background-image: url("https://eunoiajewelry.com/wp-content/uploads/2022/03/DSC09585-2-1024x683.jpg");
+  width: 100%;
+  background-size: 100%;
+  height: calc(100vh - 335px);
+}
+
+.register-page-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90vw;
+  max-width: 600px;
+
+  &__form-register-grp {
+    width: 100%;
+    border: 1px solid black;
+    padding: 30px;
+    border-radius: 10px;
+    background-color: rgba(251, 242, 236, 0.5);
+    box-shadow: 10px 10px 20px #fff;
+  }
+
+  &__title {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    padding-bottom: 20px;
+    h3 {
+      font-size: 30px;
+      font-weight: 500;
+    }
+  }
+
+  &__input-grp {
+    input {
+      margin: 5px;
+    }
+
+    input::placeholder {
+      color: rgb(55, 55, 55);
+      font-size: 16px;
+    }
+
+    label {
+      font-size: 20px;
+      font-weight: 400;
+    }
+
+    i {
+      font-size: 14px;
+    }
+  }
+
+  &__btn-register {
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+
+    button {
+      width: 120px;
+      height: 40px;
+    }
+
+    span {
+      font-size: 17px;
+    }
+  }
+
+  &__btn-register {
+    button:hover {
+      border: 1px solid black !important;
+      background-color: #f7eee8;
+    }
+
+    span {
+      color: black;
+    }
+  }
+
+  &__login {
+    display: flex;
+    justify-content: right;
+  }
+
+  &__login-btn {
+    padding-left: 10px;
+    cursor: pointer;
+    text-decoration: underline;
+    color: #d88567;
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  &__login-btn:hover {
+    color: #8f523b;
+    transition: all 0.3s ease;
+    transform: scale(1.1);
+  }
+}
+
+@media screen and (max-width: 1147.2px) {
+  .register-page-wrapper {
+    margin-top: 80px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .register-page-wrapper {
+    margin-top: 0;
+  }
+}

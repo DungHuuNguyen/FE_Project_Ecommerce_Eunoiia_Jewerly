@@ -1,0 +1,35 @@
+.user-profile-wrapper {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+
+.user-profile-container {
+  display: flex;
+  justify-content: space-around;
+  width: 100vw;
+  max-width: 1200px;
+}
+
+.user-profile-profile-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+  .user-profile-wrapper {
+    padding-top: 90px;
+  }
+  .user-profile-container {
+    flex-direction: column;
+  }
+  .user-profile-profile-nav {
+    padding-bottom: 30px;
+  }
+  .user-profile-change-profile {
+    padding-bottom: 50px;
+    display: flex;
+    justify-content: center;
+  }
+}

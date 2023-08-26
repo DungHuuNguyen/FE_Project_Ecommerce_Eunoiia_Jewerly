@@ -1,0 +1,106 @@
+.change-pass-word-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 550px;
+  width: 50vw;
+
+  .change-pass-word-container {
+    padding: 24px;
+    border-radius: 4px;
+    background-color: #fff;
+
+    .change-pass-word-container__title {
+      text-align: center;
+      margin-bottom: 24px;
+
+      h3 {
+        font-size: 32px;
+        font-weight: 400;
+        color: #333;
+      }
+    }
+
+    .change-pass-word-form {
+      .change-pass-word-form__name,
+      .change-pass-word-form__age,
+      .change-pass-word-form__email,
+      .change-pass-word-form__address,
+      .change-pass-word-form__phone-number,
+      .change-pass-word-form__gender-grp,
+      .change-pass-word-form__birth-day {
+        margin-bottom: 16px;
+
+        label {
+          display: block;
+          margin-bottom: 8px;
+          font-size: 14px;
+          color: #333;
+          font-weight: bold;
+        }
+
+        input,
+        .ant-radio-group {
+          display: flex;
+          width: 100%;
+          padding: 10px;
+          font-size: 14px;
+          border-radius: 4px;
+          color: #333;
+        }
+      }
+
+      .change-pass-word-form__btn-save {
+        text-align: center;
+
+        button {
+          width: 100px !important;
+          height: 50px;
+          padding: 10px 20px;
+          font-size: 16px;
+          font-weight: bold;
+          color: #fff;
+          background-color: #b37e6b;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+          transition: background-color 0.3s ease;
+
+          span {
+            font-weight: 500;
+            font-size: 17px;
+          }
+
+          &:hover {
+            background-color: #b58979;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1132px) {
+  .change-pass-word-wrapper {
+    padding-top: 100px;
+  }
+}
+@media screen and (max-width: 900px) {
+  .change-pass-word-wrapper {
+    padding-top: 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .change-pass-word-wrapper {
+    width: 80vw;
+  }
+
+  .change-pass-word-container {
+    &__title {
+      h3 {
+        font-size: 28px !important;
+        font-weight: 500 !important;
+      }
+    }
+  }
+}

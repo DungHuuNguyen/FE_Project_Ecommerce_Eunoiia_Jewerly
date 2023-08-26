@@ -1,0 +1,12 @@
+.list-product {
+  &__filter-grp {
+    display: flex;
+    justify-content: right;
+    gap: 20px;
+  }
+
+  &__pagination {
+    display: flex;
+    justify-content: center;
+  }
+}

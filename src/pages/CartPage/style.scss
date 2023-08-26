@@ -1,0 +1,379 @@
+.cart-page-wrapper {
+  width: 100vw;
+  padding-top: 30px;
+}
+
+.cart-page {
+  width: 100%;
+}
+
+.cart-page-shop-table {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+
+  &__shop-table-grp {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    padding: 0 20px;
+  }
+
+  &__clear-cart {
+    font-size: 18px;
+    color: #333;
+    cursor: pointer;
+    font-weight: 500;
+  }
+
+  &__clear-cart:hover {
+    color: #b37e6b;
+    text-decoration: underline;
+    transform: scale(1.1);
+    transition: all 0.3s ease-in;
+    font-weight: 600;
+  }
+
+  &__shop-table {
+    width: 100%;
+    max-width: 1440px;
+    border-collapse: collapse;
+
+    thead {
+      background-color: rgb(248, 248, 248);
+      border-bottom: rgb(215, 215, 215);
+    }
+
+    th {
+      height: 46px;
+      text-align: left;
+      padding-left: 20px;
+    }
+
+    td {
+      // height: 70px;
+      padding: 20px;
+    }
+
+    tr {
+      border: 1px solid rgb(206, 206, 206);
+    }
+  }
+
+  &__th1 {
+    width: 8%;
+  }
+  &__th2 {
+    width: 10%;
+  }
+  &__th3 {
+    width: 32%;
+  }
+  &__th4 {
+    width: 15%;
+  }
+  &__th5 {
+    width: 20%;
+  }
+  &__th6 {
+    width: 15%;
+  }
+
+  &__tbody-tr {
+  }
+
+  &__tbody-tr-td {
+  }
+
+  &__tfoot-grp {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 20px;
+
+    button {
+      width: 150px;
+      cursor: pointer;
+
+      span {
+        font-size: 16px;
+        font-weight: 600;
+      }
+    }
+  }
+
+  &__cancel-btn {
+    cursor: pointer;
+    span {
+      border: 1px solid rgb(204, 204, 204);
+      border-radius: 25px;
+      padding: 10px;
+    }
+    svg {
+      color: rgb(204, 204, 204);
+    }
+  }
+
+  &__cancel-btn:hover {
+    span {
+      border: 1px solid rgb(149, 149, 149);
+    }
+    svg {
+      color: rgb(149, 149, 149);
+    }
+  }
+
+  &__img-product {
+    cursor: pointer;
+    text-align: left !important;
+    img {
+      width: 75px;
+      height: 75px;
+    }
+  }
+
+  &__name-product {
+    p {
+      display: flex;
+      justify-content: left;
+      text-align: center;
+      cursor: pointer;
+      font-size: 17px;
+      font-weight: 700;
+    }
+
+    p.name {
+      color: rgb(179, 126, 107);
+    }
+
+    p.name:hover {
+      text-decoration: underline;
+      text-decoration-color: rgb(179, 126, 107);
+      transition: all 0.3s ease;
+    }
+
+    p.color {
+      color: rgb(33, 37, 41);
+    }
+  }
+
+  &__quantity-product {
+    // display: flex;
+  }
+
+  &__quantity-grp {
+    display: flex;
+  }
+
+  &__btn-decrement,
+  &__btn-increment,
+  &__quantity {
+    border: 1px solid rgb(215, 215, 215);
+    width: 38px;
+    height: 38px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+  }
+
+  &__btn-decrement,
+  &__btn-increment {
+    cursor: pointer;
+  }
+
+  &__quantity {
+    border-left: none;
+    border-right: none;
+  }
+
+  &__price-product,
+  &__subtotal-product {
+    font-size: 18px;
+    font-weight: 700;
+  }
+
+  &__cancel-btn,
+  &__img-product {
+    text-align: center;
+  }
+
+  &__tfoot-grp-left {
+    display: flex;
+    gap: 20px;
+    button {
+      width: 200px;
+    }
+  }
+}
+
+.cart-page-cart-totals {
+  display: flex;
+  justify-content: right;
+  max-width: 1440px;
+  width: 100vw;
+  padding-bottom: 20px;
+
+  &__cart-totals {
+    border: 1px solid rgb(206, 206, 206);
+    width: 50%;
+
+    tr {
+      border: 1px solid rgb(226, 226, 226);
+    }
+
+    tr td {
+      font-weight: 700;
+      text-align: left;
+      padding: 20px;
+      font-size: 17px;
+    }
+
+    tr td:first-child {
+      width: 35%;
+    }
+
+    tr td p {
+      font-weight: 400;
+      display: flex;
+      justify-content: left;
+      text-align: left;
+      font-size: 17px;
+    }
+  }
+
+  &__title {
+    background-color: #f7f7f7;
+    line-height: 50px;
+    padding-left: 20px;
+    h3 {
+      font-size: 20px;
+      font-weight: 500;
+      color: #7a7a7a;
+    }
+  }
+
+  &__car-totals-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  &__btn-proceed-to-checkout {
+    padding: 20px;
+    button {
+      height: 48px;
+      width: 100%;
+      font-size: 18px;
+      font-weight: 700;
+    }
+  }
+
+  &__btn-proceed-to-checkout:hover button {
+    background-color: rgb(179, 126, 107);
+    color: white !important;
+    border: none;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .cart-page-cart-totals {
+    padding-right: 20px;
+  }
+}
+
+@media screen and (max-width: 1147.2px) {
+  .cart-page-wrapper {
+    margin-top: 80px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .cart-page-wrapper {
+    margin-top: 0;
+  }
+
+  .cart-page-shop-table {
+    max-width: 900px;
+    width: 100%;
+
+    &__th2,
+    &__img-product {
+      display: none;
+    }
+
+    &__th3,
+    &__name-product {
+      p {
+        font-size: 15px;
+        font-weight: 600;
+      }
+      font-size: 15px;
+      font-weight: 600;
+    }
+
+    &__th4,
+    &__th5,
+    &__th6,
+    &__price-product,
+    &__subtotal-product {
+      font-size: 15px;
+      font-weight: 600;
+    }
+
+    &__btn-decrement,
+    &__quantity,
+    &__btn-increment {
+      font-size: 15px;
+      font-weight: 600;
+      width: 24px;
+      height: 24px;
+      display: flex;
+      justify-content: center;
+    }
+
+    &__cancel-btn {
+      span {
+        border: 1px solid rgb(204, 204, 204);
+        border-radius: 25px;
+        padding: 5px;
+      }
+      svg {
+        color: rgb(204, 204, 204);
+        width: 12px;
+        height: 12px;
+      }
+    }
+
+    &__th1 {
+      width: 5%;
+    }
+
+    &__th3 {
+      width: 64%;
+    }
+    &__th4 {
+      width: 8%;
+    }
+    &__th5 {
+      width: 15%;
+    }
+    &__th6 {
+      width: 8%;
+    }
+
+    td {
+      padding: 10px;
+    }
+  }
+
+  .cart-page-cart-totals {
+    max-width: 900px;
+    padding: 0 20px;
+    padding-bottom: 20px;
+    &__cart-totals {
+      width: 100%;
+    }
+  }
+}

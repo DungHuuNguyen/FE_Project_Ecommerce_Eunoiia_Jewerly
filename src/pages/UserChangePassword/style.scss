@@ -1,0 +1,36 @@
+.user-change-password-wrapper {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  padding-top: 100px;
+}
+
+.user-change-password-container {
+  display: flex;
+  justify-content: space-around;
+  width: 100vw;
+  max-width: 1200px;
+}
+
+.user-change-password-profile-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+  .user-change-password-wrapper {
+    padding-top: 90px;
+  }
+  .user-change-password-container {
+    flex-direction: column;
+  }
+  .user-change-password-profile-nav {
+    padding-bottom: 30px;
+  }
+  .user-change-password-change-profile {
+    padding-bottom: 50px;
+    display: flex;
+    justify-content: center;
+  }
+}

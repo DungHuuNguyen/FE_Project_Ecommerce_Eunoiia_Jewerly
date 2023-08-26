@@ -1,0 +1,52 @@
+.section5-origin-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.section5-origin-container {
+  width: 90%;
+
+  &__title {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 10px 0 20px;
+
+    h3 {
+      font-weight: 500;
+      font-size: 25px;
+    }
+  }
+
+  &__description {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    margin: 10px 0 20px;
+
+    p {
+      font-size: 17px;
+    }
+  }
+
+  &__btn {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0 20px;
+
+    button {
+      width: 150px;
+      height: 42px;
+      border: 1px solid black;
+      border-radius: 0;
+    }
+
+    span {
+      font-size: 20px;
+      text-transform: uppercase;
+      font-weight: 500;
+    }
+  }
+}

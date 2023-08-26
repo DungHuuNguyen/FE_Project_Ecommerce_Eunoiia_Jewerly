@@ -1,0 +1,28 @@
+.order-page-container {
+  width: 90vw;
+  padding-top: 20px;
+  max-width: 1360px;
+}
+
+.order-page {
+  display: flex;
+
+  &__billing-details {
+    width: 70%;
+  }
+
+  &__your-order {
+    width: 30%;
+  }
+}
+
+@media screen and (max-width: 1220px) {
+  .order-page-container {
+    padding-top: 100px;
+  }
+}
+@media screen and (max-width: 900px) {
+  .order-page-container {
+    padding-top: 20px;
+  }
+}

@@ -1,0 +1,62 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.section1-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.section1 {
+  display: flex;
+
+  &__grp1,
+  &__grp2 {
+    display: flex;
+  }
+
+  &__rings,
+  &__earrings,
+  &__bracelets,
+  &__necklaces {
+    border: 1px solid black;
+    background-color: rgb(97, 97, 56);
+    width: 20vw;
+    margin: 10px;
+    cursor: pointer;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__rings {
+    background-image: url("https://eunoiajewelry.com/wp-content/uploads/2022/03/Nhan-Vang-Tron-Don-Gian_1.jpg");
+    background-size: contain;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    p {
+      font-size: 40px;
+      font-weight: 500;
+      color: white;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .section1 {
+    flex-direction: column;
+
+    &__rings,
+    &__earrings,
+    &__bracelets,
+    &__necklaces {
+      width: 45vw;
+    }
+  }
+}

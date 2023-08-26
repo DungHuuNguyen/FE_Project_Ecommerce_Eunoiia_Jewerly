@@ -1,0 +1,105 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.login-page-wrapper {
+  display: flex;
+  justify-content: center;
+  background-image: url("https://eunoiajewelry.com/wp-content/uploads/2022/03/DSC09585-2-1024x683.jpg");
+  width: 100%;
+  background-size: 100%;
+  height: calc(100vh - 335px);
+  //   background-repeat: no-repeat;
+}
+
+.login-page-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90vw;
+  max-width: 500px;
+
+  &__form-login-grp {
+    border: 1px solid black;
+    padding: 30px;
+    border-radius: 10px;
+    background-color: rgba(251, 242, 236, 0.5);
+    box-shadow: 10px 10px 20px #fff;
+  }
+
+  &__title {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    padding-bottom: 20px;
+    h3 {
+      font-size: 30px;
+      font-weight: 500;
+    }
+  }
+
+  &__input-grp {
+    input {
+      margin: 5px;
+    }
+  }
+
+  &__btn-login {
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+
+    button {
+      width: 120px;
+      height: 40px;
+    }
+
+    span {
+      font-size: 17px;
+    }
+  }
+
+  &__btn-login:hover {
+    button {
+      border: 1px solid black !important;
+      background-color: #f7eee8;
+    }
+
+    span {
+      color: black;
+    }
+  }
+
+  &__register {
+    display: flex;
+    justify-content: right;
+  }
+
+  &__register-btn {
+    padding-left: 10px;
+    cursor: pointer;
+    text-decoration: underline;
+    color: #b37e6b;
+  }
+
+  &__register-btn:hover {
+    color: #8f523b;
+    transition: all 0.3s ease;
+    transform: scale(1.1);
+  }
+}
+
+@media screen and (max-width: 1147.2px) {
+  .login-page-wrapper {
+    margin-top: 80px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .login-page-wrapper {
+    margin-top: 0;
+  }
+}
